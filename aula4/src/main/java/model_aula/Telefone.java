@@ -31,4 +31,13 @@ public class Telefone {
     public void setTipo(String tipo) {
             this.tipo = tipo;
     }
+    
+    public void imprimirTelefone() {
+    	System.out.println(
+        		"Telefone: " + 
+        				this.getTipo() + " - (" + 
+        				this.getDdd() + ") " + 
+        				this.getNumero()
+        );
+    }
 }

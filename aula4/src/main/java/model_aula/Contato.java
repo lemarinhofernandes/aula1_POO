@@ -3,19 +3,8 @@ package model_aula;
 public class Contato {
     private String nome;
     private String email;
-    private Telefone telefone;
-    private Endereco edereco;
-
-    public Endereco getEdereco() {
-        return edereco;
-    }
-
-    public void setEdereco(Endereco edereco) {
-        this.edereco = edereco;
-    }
-
-    public Contato() {
-    }
+    private Telefone[] telefones;
+    private Endereco endereco;
 
     public String getNome() {
         return nome;
@@ -33,25 +22,31 @@ public class Contato {
         this.email = email;
     }
 
-    public Telefone getTelefone() {
-        return telefone;
+    public Telefone[] getTelefones() {
+        return telefones;
     }
 
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
+    public void setTelefones(Telefone[] telefones) {
+        this.telefones = telefones;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public void contatoCriado(){
         System.out.println("---CONTATO---");
         System.out.println("Nome: " + this.nome);
         System.out.println("Email: " + this.email);
-        System.out.println("Telefone: " + this.telefone.getTipo() + " - " + this.telefone.getDdd() + " " + this.telefone.getNumero());
-        System.out.println(
-                "Endereço: " +
-                        this.edereco.getUf() + ", " +
-                        this.edereco.getCidade() + ", " +
-                        this.edereco.getBairro() + ", " +
-                        this.edereco.getCep()
-        );
+        for(int i=0;i<2;i++) {
+        	telefones[i].imprimirTelefone();
+        };
+        endereco.imprimirEndereco();
+        
+        
     }
 }

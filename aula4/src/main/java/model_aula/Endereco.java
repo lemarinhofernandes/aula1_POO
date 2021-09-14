@@ -40,4 +40,14 @@ public class Endereco {
     public void setUf(String uf) {
         this.uf = uf;
     }
+    
+    public void imprimirEndereco() {
+    	System.out.println(
+                "Endereço: " +
+                        this.getCidade() + " - " +
+                        this.getUf() + ", " +
+                        this.getBairro() + ", " +
+                        this.getCep()
+        );
+    }
 }
